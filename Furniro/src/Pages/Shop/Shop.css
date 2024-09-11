@@ -1,0 +1,154 @@
+#shop-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #shop-header {
+    width: 1200px;
+    height: 250px; 
+    background-image: url('../../assets/Rectangle 1.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  #shop-header h1 {
+    font-size: 36px;
+    margin: 0px;
+    font-family: 'Poppins-M';
+  }
+  .breadcrumb {
+    font-size: 18px;
+    color: black;
+  }
+  .breadcrumb a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .breadcrumb a:hover {
+    color: #ddd;
+  }
+  #products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  .product-card img {
+   width: 100%;
+    height: 80%;
+    margin-bottom: 10px;
+  }
+  .product-card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-family: 'Poppins-S';
+    color: #3A3A3A;
+  } 
+  .product-card label{
+    font-family: 'Poppins-M';
+    font-size: 13px;
+  }
+  .product-card p {
+    font-size: 14px;
+    color: #3A3A3A;
+    margin-top: 5px;
+    font-family: 'Poppins-S';
+  }
+  .product-card #details-btn {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color:white ;
+    color: #B88E2F;
+    font-family: 'Poppins-S';
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    width: 200px;
+    transition: background-color 0.3s ease #FFFFFF;
+  }
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  #details-btn:hover { 
+    background-color: #e96d34;
+    color: #fff;
+
+  }
+  .product-card:hover img {
+    opacity: 0.3; 
+  }
+  .product-card:hover #details-btn {
+    display: block;
+  }
+  #pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .page-link {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #F9F1E7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .page-link:hover {
+    background-color: #B88E2F;
+  }
+  .page-link:focus {
+    outline: none;
+    background-color: #B88E2F;
+    color: white;
+  }
+ @media screen and (max-width:500px) {
+  #shop-container{
+    height:auto;
+  }
+  #shop-header{
+    width: auto;
+  }
+  #shop-header h1{
+    margin: 0;
+  }
+  #products-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-card {
+    height: 480px;
+  }
+  .product-card h3{
+    margin: 0;
+    font-size: 14px;
+  }
+  .product-card label{
+    font-size: 13px;
+  }
+  .product-card #details-btn{
+    width: 100px;
+  }
+ }

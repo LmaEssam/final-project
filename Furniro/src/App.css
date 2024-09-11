@@ -1,0 +1,17 @@
+nav ul{
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  justify-content: center;
+  list-style-type: none;
+  
+}
+nav ul li a {
+  color: black; 
+  text-decoration: none; 
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: center;
+  font-family: 'Poppins-M';
+}

@@ -1,0 +1,62 @@
+#home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  #categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 120px;
+  }
+  #header-background {
+    width:1200px;
+    height: 230px;
+    background-image: url('../../assets/Mask Group.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  #home-container h1{
+    font-family: 'Poppins-B';
+    color: #333333;
+  }
+  .category-card {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    transition: transform 0.2s;
+  }
+  .category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .category-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333333;
+    font-family: 'Poppins-S';
+  }
+  .category-card:hover {
+    transform: translateY(-5px);
+  }
+  .category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }  
+  @media screen and (max-width:500px) {
+    #categories{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #header-background{
+      width: auto;
+    }
+  }

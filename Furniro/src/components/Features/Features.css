@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Poppins-S';
+  src: url(../../assets/Font/Poppins-SemiBold.ttf);
+}
+#features-container {
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+    background-color: #FAF3EA; 
+    width: 100%;
+    padding: 20px;
+  }
+  #info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-item {
+    text-align: center;
+  }
+  .feature-item img {
+    height: 50px; 
+    margin-bottom: 10px;
+  }
+ h3 {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Poppins-S';
+  }
+  p {
+    font-size: 14px;
+    color: #898989;
+    margin: 0;
+    font-family: 'Poppins-M';
+  }
+@media screen and (max-width:500px) {
+  #features-container {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-item{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #info{
+    width: 200px;
+  }
+}
