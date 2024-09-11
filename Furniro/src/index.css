@@ -17,3 +17,11 @@ body{
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width:500px) {
+  #root{
+    width: 480px;
+  }
+  body{
+    width: 480px;
+  }
+}
