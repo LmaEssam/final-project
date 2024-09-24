@@ -1,4 +1,4 @@
-import { useContext,useState,useEffect } from 'react';
+import { useContext,useState } from 'react';
 import { Link } from 'react-router-dom'
 import { CartContext } from '../Layout/Layout';
 import Features from '../../components/Features/Features';
@@ -7,6 +7,13 @@ import logo from '../../assets/Meubel House_Logos-05.png'
 import './Cart.css'
 function Cart() {
   const { cartItems, removeItem } = useContext(CartContext);
+  const [checkoutMessage, setCheckoutMessage] = useState('');
+  const handleCheckout = () => {
+    setCheckoutMessage('Your order is in progress');
+   for (let i = cartItems.length - 1; i >= 0; i--) {
+    removeItem(i);
+   }
+  };
  
   const totalCartPrice = cartItems.reduce((total, item) => {
     const itemPrice = parseInt(item.price.replace(/[^0-9]/g, ''), 10);
@@ -28,6 +35,7 @@ function Cart() {
       <div id="cart-content">
       <table id="table-cart">
       <tbody>
+      {checkoutMessage && <div className="checkout-message">{checkoutMessage}</div>}
       {cartItems.map((item, index) => {
              const itemPrice = parseInt(item.price.replace(/[^0-9]/g, ''), 10);
                 const itemSubtotal = itemPrice * item.quantity;
@@ -67,8 +75,9 @@ function Cart() {
             <span>Total:</span>
             <p id='cart-total'>{totalCartPrice }</p>
           </div>
-          <button id="checkout-button"  >Check Out</button>
+          <button id="checkout-button" onClick={handleCheckout} >Check Out</button>
         </div>
+       
       </div>
     </div>
     <Features/>

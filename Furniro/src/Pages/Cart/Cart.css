@@ -164,6 +164,10 @@
   #subtotal{
     margin-left: 10px;
   }
+  .checkout-message{
+    font-family: 'Poppins-B';
+   margin-left: 290px;
+  }
   @media screen and (max-width:500px) {
     #cart-header{
       width: auto;
@@ -227,5 +231,8 @@
     }
     #subtotal{
       margin-left: 0px;
+    }
+    .checkout-message{
+      margin-left: 120px;
     }
   }

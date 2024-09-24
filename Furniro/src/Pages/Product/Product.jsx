@@ -77,7 +77,7 @@ function Product() {
 
   }
   function Decrement(){
-   if(counter>0){
+   if(counter>1){
       setcounter(counter-1)
    }
   }
@@ -199,7 +199,7 @@ function Product() {
             <div id='Sizes' >
             <span className='Size-box'>L</span>
             <span className='Size-box'>XL</span>
-            <span className='Size-box'>XS</span>
+            <span className='Size-box'>S</span>
             </div>
         </div>
         <div id='color'>
